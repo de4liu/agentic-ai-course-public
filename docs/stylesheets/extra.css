@@ -47,6 +47,12 @@
 .md-typeset a { color: var(--accent); }
 .md-typeset h2 { color: var(--accent); }
 
+/* no permalink pilcrow on display headings */
+.hero .headerlink,
+.showcase .headerlink {
+  display: none;
+}
+
 /* slide-style title rule: maroon heading, short gold underline */
 .md-typeset h2::after {
   content: "";
