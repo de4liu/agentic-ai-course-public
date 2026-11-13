@@ -330,40 +330,6 @@
   margin: 0;
 }
 
-/* ---------------- pull quote (slide `quote` layout) ---------------- */
-
-.pullquote {
-  margin: 0 0 2.4rem;
-  padding: 0.6rem 0 0.6rem 1.6rem;
-  border-left: 6px solid var(--umn-gold);
-}
-
-.pullquote-text {
-  font-size: 1.35rem;
-  line-height: 1.35;
-  font-weight: 400;
-  color: var(--umn-maroon);
-  margin: 0 0 0.5rem;
-}
-
-.pullquote-attr {
-  font-size: 0.78rem;
-  color: var(--card-muted);
-  margin: 0;
-}
-
-.pullquote-attr::before {
-  content: "";
-  display: inline-block;
-  width: 1.4rem;
-  height: 1px;
-  background: var(--card-muted);
-  vertical-align: middle;
-  margin-right: 0.5rem;
-}
-
-[data-md-color-scheme="slate"] .pullquote-text { color: #e39aa9; }
-
 /* ---------------- callout (slide .callout: cream, maroon rule) ---------------- */
 
 .callout {

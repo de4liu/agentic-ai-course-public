@@ -30,12 +30,5 @@ and discussion.
 
 [Download the slides (PDF)](assets/sample-session-w01s1.pdf){ .md-button }
 
-## A typical week in this course
-
-| | Session 1 (concepts) | Session 2 (hands-on) |
-|---|---|---|
-| **Format** | Short lecture, live demos, case discussion | Guided build with no-code tools |
-| **You leave with** | Vocabulary and mental models | A working artifact or design |
-
 Every other week also includes a short reflection post. Three weeks include
 a build sprint; Week 7 is the AI Innovation Showcase.

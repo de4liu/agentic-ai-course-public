@@ -46,12 +46,6 @@ to translate business problems into AI solutions, and how to lead
 responsibly in AI-augmented organizations. It is open to all Carlson
 concentrations and requires no prior technical background.
 
-<div class="pullquote" markdown="1">
-<p class="pullquote-text" markdown="1">"The AI problem is fundamentally an IS problem."</p>
-<p class="pullquote-text" markdown="1">"If we are not adaptive and creative, the b-school will bypass us."</p>
-<p class="pullquote-attr" markdown="1">Thomas H. Davenport</p>
-</div>
-
 ## Learning objectives
 
 By the end of the course, students can:
