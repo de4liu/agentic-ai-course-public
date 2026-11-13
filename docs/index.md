@@ -46,6 +46,12 @@ to translate business problems into AI solutions, and how to lead
 responsibly in AI-augmented organizations. It is open to all Carlson
 concentrations and requires no prior technical background.
 
+<div class="pullquote" markdown="1">
+<p class="pullquote-text" markdown="1">"The AI problem is fundamentally an IS problem."</p>
+<p class="pullquote-text" markdown="1">"If we are not adaptive and creative, the b-school will bypass us."</p>
+<p class="pullquote-attr" markdown="1">Thomas H. Davenport</p>
+</div>
+
 ## Learning objectives
 
 By the end of the course, students can:
@@ -98,6 +104,38 @@ final (each split into a closed-book part and an open-AI part), weekly
 check-ins, and a team capstone worth 25% of the grade, presented at the AI
 Innovation Showcase.
 
+## Learning by doing, every session
+
+Every session includes at least one structured activity. Students audit,
+argue, build, break and pitch; lecture segments stay short.
+
+<div class="objective-grid" markdown="1">
+<div class="objective-card" markdown="1">
+<h3>Structured in-class activities</h3>
+<p>Personal task audits, agent blueprint cards, case analysis (a help-desk agent that closed everything), vendor-question drills, pitch rehearsals.</p>
+</div>
+<div class="objective-card" markdown="1">
+<h3>Debates with a position</h3>
+<p>Does AI multiply a team or replace it? Students take a side, defend it, and confront the strongest counterargument.</p>
+</div>
+<div class="objective-card" markdown="1">
+<h3>Live demos, real failure</h3>
+<p>Models vary, hallucinate and break on screen. Students learn verification by watching it go wrong, not by being told.</p>
+</div>
+<div class="objective-card" markdown="1">
+<h3>Three build sprints</h3>
+<p>A workflow automation, a first agent, then a red-team round: attack a peer's build, harden your own, document what you found.</p>
+</div>
+<div class="objective-card" markdown="1">
+<h3>Authentic assessment</h3>
+<p>The capstone is pitched live to external guests at the AI Innovation Showcase and scored like a real pitch, not a class presentation.</p>
+</div>
+<div class="objective-card" markdown="1">
+<h3>Reflection as a habit</h3>
+<p>Four graded posts on what you did, how you checked it, and what you would change, building verification into the routine.</p>
+</div>
+</div>
+
 <h2 id="the-arc">Weekly outline</h2>
 
 | Week | Theme | Session 1 (concepts) | Session 2 (hands-on) |
@@ -148,6 +186,14 @@ Showcase on December 14, 2026.
 </p>
 </div>
 </section>
+
+<div class="callout" markdown="1">
+**This course runs on an AI-native workflow.** Everything students see, from
+the syllabus to slide decks and Canvas pages, starts as plain text in a git
+repository, produced by a coding agent under instructor control. Read about
+it:
+[AI-Native Teaching: My New Course Development and Maintenance Workflow](https://de4liu.github.io/home/ai-native-teaching/)
+</div>
 
 ## Instructor
 

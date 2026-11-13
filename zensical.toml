@@ -6,8 +6,7 @@ site_author = "De Liu"
 
 copyright = "Copyright &copy; 2026 De Liu, University of Minnesota"
 
-repo_url = "https://github.com/de4liu/agentic-ai-course-public"
-repo_name = "de4liu/agentic-ai-course-public"
+# repo_url intentionally unset: no GitHub link in the header/footer
 
 nav = [
   { "Home" = "index.md" },
@@ -32,10 +31,6 @@ features = [
   "search.highlight",
 ]
 
-[project.theme.font]
-text = "Inter"
-code = "JetBrains Mono"
-
 [[project.theme.palette]]
 media = "(prefers-color-scheme: light)"
 scheme = "default"
@@ -48,9 +43,7 @@ scheme = "slate"
 toggle.icon = "lucide/moon"
 toggle.name = "Switch to system preference"
 
-[[project.extra.social]]
-icon = "fontawesome/brands/github"
-link = "https://github.com/de4liu"
+# no social links in the footer
 
 [project.markdown_extensions]
 abbr = {}

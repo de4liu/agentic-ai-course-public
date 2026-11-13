@@ -1,16 +1,18 @@
-/* Agentic AI for Business Applications - landing page styles */
+/* Agentic AI for Business Applications - UMN Carlson theme
+   Mirrors the course slide template (theme/idsc4590.src.css):
+   maroon #7a0019, gold #ffcc33, cream #e6e0d2, paper #f6f4ee */
 
 :root {
   --umn-maroon: #7a0019;
+  --umn-maroon-dark: #5c0013;
+  --umn-maroon-mid: #96304a;
   --umn-gold: #ffcc33;
-  --navy: #0b1e3a;
-  --navy-deep: #081527;
-  --cyan: #37c6e8;
-  --ink: #1d2129;
-  --muted: #5f6672;
-  --line: #e3e6ea;
-  --paper: #f7f8fa;
-  --radius: 18px;
+  --umn-cream: #e6e0d2;
+  --umn-paper: #f6f4ee;
+  --ink: #222222;
+  --muted: #5f5f5f;
+  --line: #d9d3c4;
+  --radius: 14px;
 }
 
 /* theme-aware aliases; fall back to light values if vars are absent */
@@ -22,40 +24,70 @@
   --accent: var(--umn-maroon);
 }
 
-/* slate scheme: hardcode card colors so they never depend on theme vars;
-   maroon is too dark on slate, so the accent becomes a readable rose */
+/* maroon is too dark on slate; swap accent for a readable rose */
 [data-md-color-scheme="slate"] {
   --accent: #e39aa9;
   --line: #2a3442;
-  --card-bg: #222836;
-  --card-fg: #e6eaf1;
-  --card-muted: #a8b3c2;
-  --card-line: #39424f;
+  --card-bg: #222222;
+  --card-fg: #e8e4dc;
+  --card-muted: #b5afa3;
+  --card-line: #3d3a33;
 }
 
-/* navy header/footer accent where the theme exposes primary color */
+/* maroon header and footer */
 :root {
-  --md-primary-fg-color: var(--navy);
-  --md-primary-fg-color--light: #16305a;
-  --md-primary-fg-color--dark: var(--navy-deep);
-  --md-accent-fg-color: var(--cyan);
+  --md-primary-fg-color: var(--umn-maroon);
+  --md-primary-fg-color--light: var(--umn-maroon-mid);
+  --md-primary-fg-color--dark: var(--umn-maroon-dark);
+  --md-accent-fg-color: var(--umn-gold);
+  --md-text-font: Arial, "Liberation Sans", Helvetica, sans-serif;
 }
 
-/* ---------------- hero ---------------- */
+/* links and headings take the maroon accent, like the slide theme */
+.md-typeset a { color: var(--accent); }
+.md-typeset h2 { color: var(--accent); }
+
+/* slide-style title rule: maroon heading, short gold underline */
+.md-typeset h2::after {
+  content: "";
+  display: block;
+  width: 44px;
+  height: 4px;
+  margin-top: 8px;
+  background: var(--umn-gold);
+}
+
+/* ---------------- hero (cover slide: maroon panel, gold wedge) ---------------- */
 
 .hero {
-  margin: 0 0 2.2rem;
-  border-radius: var(--radius);
+  position: relative;
+  /* full-bleed: span the viewport and sit flush under the header */
+  width: 100vw;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: -2.1rem 0 2.2rem;
   overflow: hidden;
-  background:
-    linear-gradient(100deg, rgba(8, 21, 39, 0.94) 30%, rgba(8, 21, 39, 0.55) 70%, rgba(8, 21, 39, 0.35)),
-    url("../assets/banner.jpg") center/cover no-repeat;
+  background: linear-gradient(120deg, var(--umn-maroon-dark) 0%, var(--umn-maroon) 55%, #8c0f22 100%);
   color: #fff;
 }
 
+/* gold wedge, bottom-left, like the template cover */
+.hero::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 34%;
+  height: 10px;
+  background: var(--umn-gold);
+}
+
 .hero-inner {
-  max-width: 46rem;
-  padding: 3.4rem 3rem 3rem;
+  position: relative;
+  max-width: 61rem;
+  margin: 0 auto;
+  padding: 3.4rem 1.2rem 3.2rem;
+  z-index: 1;
 }
 
 .hero-eyebrow {
@@ -70,14 +102,24 @@
   color: #fff;
   font-size: 2.5rem;
   line-height: 1.12;
-  font-weight: 800;
+  font-weight: 400;
+  letter-spacing: -0.02em;
   margin: 0 0 0.9rem;
+}
+
+.hero h1::after {
+  content: "";
+  display: block;
+  width: 64px;
+  height: 5px;
+  margin-top: 14px;
+  background: var(--umn-gold);
 }
 
 .hero-tagline {
   font-size: 1.02rem;
   line-height: 1.55;
-  color: #d7e3f2;
+  color: #f5e9ec;
   margin: 0 0 1.3rem;
 }
 
@@ -93,9 +135,9 @@
   font-weight: 600;
   letter-spacing: 0.04em;
   padding: 0.32rem 0.7rem;
-  border: 1px solid rgba(255, 255, 255, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.4);
   border-radius: 999px;
-  color: #eaf1f9;
+  color: #fbeeee;
   background: rgba(255, 255, 255, 0.08);
 }
 
@@ -120,16 +162,16 @@
 
 .btn-primary {
   background: var(--umn-gold);
-  color: var(--navy-deep) !important;
-  box-shadow: 0 4px 18px rgba(255, 204, 51, 0.35);
+  color: var(--umn-maroon-dark) !important;
+  box-shadow: 0 4px 18px rgba(255, 204, 51, 0.3);
 }
 
 .btn-ghost {
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.55);
   color: #fff !important;
 }
 
-/* ---------------- weekly outline table ---------------- */
+/* ---------------- weekly outline table (maroon header) ---------------- */
 
 .md-typeset table:not([class]) {
   border-radius: 12px;
@@ -139,9 +181,9 @@
 }
 
 .md-typeset table:not([class]) th {
-  background: var(--navy);
+  background: var(--umn-maroon);
   color: #fff;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .md-typeset table:not([class]) td {
@@ -150,7 +192,7 @@
   color: var(--card-fg);
 }
 
-/* ---------------- objectives ---------------- */
+/* ---------------- objectives (slide .card: white, gold top rule) ---------------- */
 
 .objective-grid {
   display: grid;
@@ -162,14 +204,15 @@
 .objective-card {
   position: relative;
   border: 1px solid var(--card-line);
-  border-radius: var(--radius);
+  border-top: 4px solid var(--umn-gold);
+  border-radius: 10px;
   padding: 1.35rem 1.2rem 1.1rem;
   background: var(--card-bg);
-  transition: box-shadow 0.15s ease, border-color 0.15s ease;
+  transition: box-shadow 0.15s ease;
 }
 
 .objective-card:hover {
-  box-shadow: 0 8px 24px rgba(11, 30, 58, 0.12);
+  box-shadow: 0 8px 24px rgba(92, 0, 19, 0.12);
 }
 
 .objective-num {
@@ -195,18 +238,24 @@
   color: var(--card-muted);
 }
 
-/* ---------------- showcase ---------------- */
+/* ---------------- showcase (maroon panel, gold accents) ---------------- */
 
 .showcase {
+  /* full-bleed band, same treatment as the hero */
+  position: relative;
+  width: 100vw;
+  left: 50%;
+  transform: translateX(-50%);
   margin: 0 0 2.4rem;
-  border-radius: var(--radius);
-  background:
-    radial-gradient(60rem 30rem at 110% -20%, rgba(55, 198, 232, 0.16), transparent 55%),
-    linear-gradient(160deg, var(--navy-deep), var(--navy) 60%, #0e2a4e);
+  background: linear-gradient(150deg, var(--umn-maroon-dark) 0%, var(--umn-maroon) 60%, #8c0f22 100%);
   color: #fff;
 }
 
-.showcase-inner { padding: 2.6rem 2.6rem 2.2rem; }
+.showcase-inner {
+  max-width: 61rem;
+  margin: 0 auto;
+  padding: 2.6rem 1.2rem 2.2rem;
+}
 
 .showcase-eyebrow {
   font-size: 0.68rem;
@@ -220,14 +269,23 @@
   color: #fff;
   margin: 0 0 0.8rem;
   font-size: 1.7rem;
-  border: none;
-  padding: 0;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+.showcase h2::after {
+  content: "";
+  display: block;
+  width: 44px;
+  height: 4px;
+  margin-top: 8px;
+  background: var(--umn-gold);
 }
 
 .showcase-lede {
   font-size: 0.88rem;
   line-height: 1.6;
-  color: #cfdbec;
+  color: #f3dee2;
   max-width: 44rem;
   margin: 0 0 1.6rem;
 }
@@ -240,14 +298,15 @@
 }
 
 .showcase-item {
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-top: 3px solid var(--umn-gold);
+  border-radius: 10px;
   padding: 1rem 1.1rem;
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.06);
 }
 
 .showcase-item h3 {
-  color: var(--umn-gold);
+  color: #fff;
   margin: 0 0 0.35rem;
   font-size: 0.9rem;
 }
@@ -256,14 +315,74 @@
   margin: 0;
   font-size: 0.74rem;
   line-height: 1.5;
-  color: #b9c8dc;
+  color: #ecd3d8;
 }
 
 .showcase-note {
   font-size: 0.78rem;
-  color: #9fb3cc;
+  color: #e8c8cf;
   margin: 0;
 }
+
+/* ---------------- pull quote (slide `quote` layout) ---------------- */
+
+.pullquote {
+  margin: 0 0 2.4rem;
+  padding: 0.6rem 0 0.6rem 1.6rem;
+  border-left: 6px solid var(--umn-gold);
+}
+
+.pullquote-text {
+  font-size: 1.35rem;
+  line-height: 1.35;
+  font-weight: 400;
+  color: var(--umn-maroon);
+  margin: 0 0 0.5rem;
+}
+
+.pullquote-attr {
+  font-size: 0.78rem;
+  color: var(--card-muted);
+  margin: 0;
+}
+
+.pullquote-attr::before {
+  content: "";
+  display: inline-block;
+  width: 1.4rem;
+  height: 1px;
+  background: var(--card-muted);
+  vertical-align: middle;
+  margin-right: 0.5rem;
+}
+
+[data-md-color-scheme="slate"] .pullquote-text { color: #e39aa9; }
+
+/* ---------------- callout (slide .callout: cream, maroon rule) ---------------- */
+
+.callout {
+  border-left: 5px solid var(--umn-maroon);
+  border-radius: 0 10px 10px 0;
+  background: var(--umn-paper);
+  padding: 1.05rem 1.3rem;
+  margin: 0 0 2.4rem;
+  color: var(--ink);
+}
+
+.callout p {
+  margin: 0;
+  font-size: 0.84rem;
+  line-height: 1.6;
+}
+
+.callout a { color: var(--umn-maroon); font-weight: 600; }
+
+[data-md-color-scheme="slate"] .callout {
+  background: #2a2518;
+  color: var(--card-fg);
+}
+
+[data-md-color-scheme="slate"] .callout a { color: #e39aa9; }
 
 /* ---------------- instructor ---------------- */
 
@@ -272,7 +391,8 @@
   gap: 1.6rem;
   align-items: center;
   border: 1px solid var(--card-line);
-  border-radius: var(--radius);
+  border-top: 4px solid var(--umn-gold);
+  border-radius: 10px;
   padding: 1.5rem 1.8rem;
   margin: 0 0 2rem;
   background: var(--card-bg);
@@ -311,7 +431,7 @@
   width: 100%;
   height: 34rem;
   border: 1px solid var(--card-line);
-  border-radius: 12px;
+  border-radius: 10px;
   background: var(--card-bg);
 }
 
@@ -319,7 +439,7 @@
 
 @media screen and (max-width: 60rem) {
   .objective-grid, .showcase-grid { grid-template-columns: 1fr; }
-  .hero-inner { padding: 2.4rem 1.6rem; }
+  .hero-inner { padding: 2.4rem 1.2rem; }
   .hero h1 { font-size: 1.9rem; }
   .showcase-inner { padding: 1.8rem 1.4rem; }
   .instructor { flex-direction: column; text-align: center; }
