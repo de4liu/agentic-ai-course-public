@@ -1,0 +1,326 @@
+/* Agentic AI for Business Applications - landing page styles */
+
+:root {
+  --umn-maroon: #7a0019;
+  --umn-gold: #ffcc33;
+  --navy: #0b1e3a;
+  --navy-deep: #081527;
+  --cyan: #37c6e8;
+  --ink: #1d2129;
+  --muted: #5f6672;
+  --line: #e3e6ea;
+  --paper: #f7f8fa;
+  --radius: 18px;
+}
+
+/* theme-aware aliases; fall back to light values if vars are absent */
+:root {
+  --card-bg: var(--md-default-bg-color, #ffffff);
+  --card-fg: var(--md-default-fg-color, var(--ink));
+  --card-muted: var(--md-default-fg-color--light, var(--muted));
+  --card-line: var(--md-default-fg-color--lightest, var(--line));
+  --accent: var(--umn-maroon);
+}
+
+/* slate scheme: hardcode card colors so they never depend on theme vars;
+   maroon is too dark on slate, so the accent becomes a readable rose */
+[data-md-color-scheme="slate"] {
+  --accent: #e39aa9;
+  --line: #2a3442;
+  --card-bg: #222836;
+  --card-fg: #e6eaf1;
+  --card-muted: #a8b3c2;
+  --card-line: #39424f;
+}
+
+/* navy header/footer accent where the theme exposes primary color */
+:root {
+  --md-primary-fg-color: var(--navy);
+  --md-primary-fg-color--light: #16305a;
+  --md-primary-fg-color--dark: var(--navy-deep);
+  --md-accent-fg-color: var(--cyan);
+}
+
+/* ---------------- hero ---------------- */
+
+.hero {
+  margin: 0 0 2.2rem;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background:
+    linear-gradient(100deg, rgba(8, 21, 39, 0.94) 30%, rgba(8, 21, 39, 0.55) 70%, rgba(8, 21, 39, 0.35)),
+    url("../assets/banner.jpg") center/cover no-repeat;
+  color: #fff;
+}
+
+.hero-inner {
+  max-width: 46rem;
+  padding: 3.4rem 3rem 3rem;
+}
+
+.hero-eyebrow {
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--umn-gold);
+  margin: 0 0 0.9rem;
+}
+
+.hero h1 {
+  color: #fff;
+  font-size: 2.5rem;
+  line-height: 1.12;
+  font-weight: 800;
+  margin: 0 0 0.9rem;
+}
+
+.hero-tagline {
+  font-size: 1.02rem;
+  line-height: 1.55;
+  color: #d7e3f2;
+  margin: 0 0 1.3rem;
+}
+
+.hero-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin: 0 0 1.6rem;
+}
+
+.chip {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 0.32rem 0.7rem;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 999px;
+  color: #eaf1f9;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.hero-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin: 0;
+}
+
+.btn {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 0.68rem 1.3rem;
+  border-radius: 999px;
+  text-decoration: none !important;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn:hover { transform: translateY(-1px); }
+
+.btn-primary {
+  background: var(--umn-gold);
+  color: var(--navy-deep) !important;
+  box-shadow: 0 4px 18px rgba(255, 204, 51, 0.35);
+}
+
+.btn-ghost {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: #fff !important;
+}
+
+/* ---------------- weekly outline table ---------------- */
+
+.md-typeset table:not([class]) {
+  border-radius: 12px;
+  overflow: hidden;
+  font-size: 0.78rem;
+  box-shadow: 0 0 0 1px var(--card-line);
+}
+
+.md-typeset table:not([class]) th {
+  background: var(--navy);
+  color: #fff;
+  font-weight: 600;
+}
+
+.md-typeset table:not([class]) td {
+  vertical-align: top;
+  background: var(--card-bg);
+  color: var(--card-fg);
+}
+
+/* ---------------- objectives ---------------- */
+
+.objective-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 0 0 2.4rem;
+}
+
+.objective-card {
+  position: relative;
+  border: 1px solid var(--card-line);
+  border-radius: var(--radius);
+  padding: 1.35rem 1.2rem 1.1rem;
+  background: var(--card-bg);
+  transition: box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.objective-card:hover {
+  box-shadow: 0 8px 24px rgba(11, 30, 58, 0.12);
+}
+
+.objective-num {
+  position: absolute;
+  top: 1.1rem;
+  right: 1.1rem;
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: var(--card-muted);
+  letter-spacing: 0.06em;
+}
+
+.objective-card h3 {
+  margin: 0 0 0.35rem;
+  font-size: 1.02rem;
+  color: var(--accent);
+}
+
+.objective-card p {
+  margin: 0;
+  font-size: 0.78rem;
+  line-height: 1.5;
+  color: var(--card-muted);
+}
+
+/* ---------------- showcase ---------------- */
+
+.showcase {
+  margin: 0 0 2.4rem;
+  border-radius: var(--radius);
+  background:
+    radial-gradient(60rem 30rem at 110% -20%, rgba(55, 198, 232, 0.16), transparent 55%),
+    linear-gradient(160deg, var(--navy-deep), var(--navy) 60%, #0e2a4e);
+  color: #fff;
+}
+
+.showcase-inner { padding: 2.6rem 2.6rem 2.2rem; }
+
+.showcase-eyebrow {
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--umn-gold);
+  margin: 0 0 0.7rem;
+}
+
+.showcase h2 {
+  color: #fff;
+  margin: 0 0 0.8rem;
+  font-size: 1.7rem;
+  border: none;
+  padding: 0;
+}
+
+.showcase-lede {
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: #cfdbec;
+  max-width: 44rem;
+  margin: 0 0 1.6rem;
+}
+
+.showcase-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 0 0 1.4rem;
+}
+
+.showcase-item {
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 12px;
+  padding: 1rem 1.1rem;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.showcase-item h3 {
+  color: var(--umn-gold);
+  margin: 0 0 0.35rem;
+  font-size: 0.9rem;
+}
+
+.showcase-item p {
+  margin: 0;
+  font-size: 0.74rem;
+  line-height: 1.5;
+  color: #b9c8dc;
+}
+
+.showcase-note {
+  font-size: 0.78rem;
+  color: #9fb3cc;
+  margin: 0;
+}
+
+/* ---------------- instructor ---------------- */
+
+.instructor {
+  display: flex;
+  gap: 1.6rem;
+  align-items: center;
+  border: 1px solid var(--card-line);
+  border-radius: var(--radius);
+  padding: 1.5rem 1.8rem;
+  margin: 0 0 2rem;
+  background: var(--card-bg);
+  color: var(--card-fg);
+}
+
+.instructor-photo {
+  width: 6.5rem;
+  height: 6.5rem;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--umn-gold);
+  flex-shrink: 0;
+  margin: 0;
+}
+
+.instructor-bio p {
+  margin: 0;
+  font-size: 0.82rem;
+  line-height: 1.6;
+  color: var(--card-fg);
+}
+
+.btn-text { font-weight: 600; }
+
+.footer-note {
+  text-align: center;
+  font-size: 0.68rem;
+  color: var(--card-muted);
+  padding: 1.2rem 0 0.4rem;
+}
+
+/* ---------------- sample session ---------------- */
+
+.pdf-embed {
+  width: 100%;
+  height: 34rem;
+  border: 1px solid var(--card-line);
+  border-radius: 12px;
+  background: var(--card-bg);
+}
+
+/* ---------------- responsive ---------------- */
+
+@media screen and (max-width: 60rem) {
+  .objective-grid, .showcase-grid { grid-template-columns: 1fr; }
+  .hero-inner { padding: 2.4rem 1.6rem; }
+  .hero h1 { font-size: 1.9rem; }
+  .showcase-inner { padding: 1.8rem 1.4rem; }
+  .instructor { flex-direction: column; text-align: center; }
+}
