@@ -23,12 +23,12 @@ and discussion.
 ## Slides
 
 <iframe
-  src="../assets/sample-session-w01s1.pdf"
+  src="assets/sample-session-w01s1.pdf"
   class="pdf-embed"
   title="Week 1 Session 1 slides: How AI Works and How to Work With It">
 </iframe>
 
-[Download the slides (PDF)](../assets/sample-session-w01s1.pdf){ .md-button }
+[Download the slides (PDF)](assets/sample-session-w01s1.pdf){ .md-button }
 
 ## A typical week in this course
 
