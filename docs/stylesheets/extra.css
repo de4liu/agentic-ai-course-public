@@ -155,8 +155,8 @@
   transform: translateX(-50%);
   margin: -2.1rem 0 2.2rem;
   overflow: hidden;
-  background: linear-gradient(120deg, var(--umn-maroon-dark) 0%, var(--umn-maroon) 55%, #8c0f22 100%);
-  color: #fff;
+  background: linear-gradient(120deg, var(--umn-paper) 0%, #fbf9f4 60%, #ffffff 100%);
+  color: var(--ink);
 }
 
 /* gold wedge, bottom-left, like the template cover */
@@ -182,12 +182,12 @@
   font-size: 0.72rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--umn-gold);
+  color: var(--umn-maroon);
   margin: 0 0 0.9rem;
 }
 
 .hero h1 {
-  color: #fff;
+  color: var(--umn-maroon);
   font-size: 2.5rem;
   line-height: 1.12;
   font-weight: 400;
@@ -207,7 +207,7 @@
 .hero-tagline {
   font-size: 1.02rem;
   line-height: 1.55;
-  color: #f5e9ec;
+  color: var(--muted);
   margin: 0 0 1.3rem;
 }
 
@@ -223,10 +223,10 @@
   font-weight: 600;
   letter-spacing: 0.04em;
   padding: 0.32rem 0.7rem;
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(122, 0, 25, 0.35);
   border-radius: 999px;
-  color: #fbeeee;
-  background: rgba(255, 255, 255, 0.08);
+  color: var(--umn-maroon);
+  background: rgba(122, 0, 25, 0.05);
 }
 
 .hero-cta {
@@ -255,7 +255,36 @@
 }
 
 .btn-ghost {
-  border: 1px solid rgba(255, 255, 255, 0.55);
+  border: 1px solid var(--umn-maroon);
+  color: var(--umn-maroon) !important;
+}
+
+/* dark mode: keep a deep maroon hero, it reads as a dark card there */
+[data-md-color-scheme="slate"] .hero {
+  background: linear-gradient(120deg, #300009 0%, #4d0010 55%, #5c0013 100%);
+  color: #fff;
+}
+
+[data-md-color-scheme="slate"] .hero-eyebrow {
+  color: var(--umn-gold);
+}
+
+[data-md-color-scheme="slate"] .hero h1 {
+  color: #fff;
+}
+
+[data-md-color-scheme="slate"] .hero-tagline {
+  color: #f5e9ec;
+}
+
+[data-md-color-scheme="slate"] .chip {
+  border-color: rgba(255, 255, 255, 0.4);
+  color: #fbeeee;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+[data-md-color-scheme="slate"] .btn-ghost {
+  border-color: rgba(255, 255, 255, 0.55);
   color: #fff !important;
 }
 
