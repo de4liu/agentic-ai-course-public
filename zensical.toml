@@ -1,6 +1,6 @@
 [project]
 site_url = "https://de4liu.github.io/agentic-ai-course-public/"
-site_name = "Agentic AI for Business Applications"
+site_name = "Agentic AI for Business"
 site_description = "IDSC 4590: a 7-week, no-code course at the Carlson School of Management where business students learn to evaluate, build, and lead with agentic AI."
 site_author = "De Liu"
 
@@ -26,6 +26,7 @@ features = [
   "navigation.instant.prefetch",
   "navigation.path",
   "navigation.sections",
+  "navigation.tabs",
   "navigation.top",
   "navigation.tracking",
   "search.highlight",
